@@ -1,0 +1,202 @@
+/* Take padding and borders into account when sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Overall Fonts and background */
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 18px;
+  background-color: #e9e8e6;
+  color: #79342d;
+}
+
+/* center the wrapper element */
+#wrapper {
+  margin: 0 auto;
+  /* overflow: hidden; */
+  background-color: #fff;
+}
+
+/* Style each of the 'h' tags */
+h1 {
+  font-size: 38px;
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+  padding-top: 15px;
+}
+
+h2 {
+  font-size: 30px;
+  /* text-align: center; */
+  padding: 15px 0;
+}
+
+h3 {
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+/* Make all 'h' tags bold */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+/* Float the columns to the left */
+.column {
+  float: left;
+}
+
+/* ------NAVBAR------ */
+
+nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+/* nav ul {
+  display: flex;
+  justify-content: space-around;
+} */
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 10px;
+}
+
+nav ul li:hover {
+  background-color: #79342d;
+  color: #fff;
+}
+
+/* ------LEFT COLUMN SPECIFIC STYLING------ */
+/* resize image */
+#col-left img {
+  width: 400px;
+  padding-top: 15px;
+}
+
+/* make strong tag bold */
+strong {
+  font-weight: bold;
+}
+
+/* contact details */
+.contact a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ------RIGHT COLUMN SPECIFIC STYLING------ */
+/* Style the lists */
+#col-right ul li {
+  list-style-type: square;
+}
+
+#col-right ul li {
+  list-style-position: inside;
+}
+
+/* Website paragraph and link styling */
+#col-right p:last-of-type {
+  margin: 10px 0;
+}
+
+#col-right a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#col-right a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+#col-right a:hover {
+  text-decoration: underline;
+}
+
+i {
+  font-style: italic;
+}
+
+/* ------FOOTER------ */
+/* Styling the footer */
+footer {
+  margin: auto;
+  text-align: center;
+  clear: both;
+  padding: 20px 0 10px 0;
+  font-size: 14px;
+}
+
+/* ------RESPONSIVE LAYOUT------ */
+/* For screen widths larger than 600px */
+@media only screen and (min-width: 601px) {
+  #wrapper {
+    width: 1020px;
+    /* border: 1px solid black; */
+  }
+
+  #col-left {
+    width: 400px;
+    /* border: 1px solid black; */
+    margin-left: 20px;
+  }
+
+  #col-right {
+    width: 600px;
+    /* border: 1px solid black; */
+    padding: 0 20px;
+  }
+}
+
+/* For screen widths smaller than 600px */
+@media only screen and (max-width: 600px) {
+  #wrapper {
+    width: 100%;
+    /* border: 1px solid black; */
+  }
+
+  h1 {
+    padding: 15px 10px 0 10px;
+  }
+  nav ul {
+    text-align: center;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  nav ul li {
+    float: none;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  nav ul li:last-of-type {
+    padding-bottom: 0;
+  }
+
+  #col-left {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  #col-right {
+    padding: 0 15px;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+/* todo
+fallback for flex */
